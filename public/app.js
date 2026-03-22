@@ -147,7 +147,7 @@ let voiceOffset = 0;
 let isVoiceSeeking = false;
 let voiceSeekLock = 0;
 
-// ⭐ 播放状态（唯一真相）
+// ⭐ 播放状态
 function isVoicePlaying() {
     return !!voiceSource;
 }
@@ -213,12 +213,12 @@ async function loadVoice() {
     // ⭐ 点击查找 → 立即停止所有播放
     stopVoice();
 
-    if (!bgm.paused) {
-        bgm.pause();
-        bgm.currentTime = 0; // ⭐ 可选：回到开头
-        btnBgmPlay.innerText = "▶";
-        setLoading(btnBgmPlay, false);
-    }
+   //if (!bgm.paused) {
+    //    bgm.pause();
+     //   bgm.currentTime = 0; // ⭐ 可选：回到开头
+      //  btnBgmPlay.innerText = "▶";
+      //  setLoading(btnBgmPlay, false);
+ //  }
 
     let name = inputText.value.trim().replace(".", "_");
 
