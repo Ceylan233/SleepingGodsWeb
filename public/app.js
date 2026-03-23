@@ -220,7 +220,7 @@ async function loadVoice() {
       //  setLoading(btnBgmPlay, false);
  //  }
 
-    let name = inputText.value.trim().replace(".", "_");
+    let name = inputText.value.trim().replace(".", "_").toLowerCase();
 
     if (!name) {
         showToast("请输入名称");
