@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<title>空寂之钟</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="favicon.ico">
+		<link rel="stylesheet" href="Kongji.css">
+	</head>
+
+	<body>
+		<div id="toast"></div>
+		<div class="bg-fog"></div>
+		<div class="bg-glow"></div>
+		<div class="bg-leaves"></div>
+		<div class="bg-watch"></div>
+		<div class="container">
+
+			<div class="title">空寂之钟</div>
+
+			<div class="input-box">
+				<input id="inputText" placeholder="输入编号（例如 1 / 1B）">
+				<button class="clear-btn" onclick="inputText.value=''">✕</button>
+			</div>
+
+			<div class="type-select">
+				<label>
+					<input type="radio" name="type" value="investigate" checked>
+					<span>调查卡牌</span>
+				</label>
+				<label>
+					<input type="radio" name="type" value="core">
+					<span>核心卡牌</span>
+				</label>
+				<label>
+					<input type="radio" name="type" value="discuss">
+					<span>讨论卡牌</span>
+				</label>
+			</div>
+
+			<button class="btn" id="btnSearch">查找</button>
+
+			<div class="card">
+				<div class="card-title">语音播放器</div>
+				<input type="range" id="seekBar" step="1">
+				<div id="timeText" class="time">00:00 / 00:00</div>
+				<div class="circle-btn" id="btnPlay">▶</div>
+			</div>
+
+			<div id="noticeText" class="notice"></div>
+
+		</div>
+
+		<script src="Kongji.js"></script>
+	</body>
+</html>
